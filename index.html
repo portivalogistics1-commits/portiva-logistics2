@@ -9,140 +9,142 @@
 <style>
 
 body{
-margin:0;
-font-family:Tajawal;
-background:#0b1f3a;
-color:#fff;
+    margin:0;
+    font-family:TahomA;
+    background:#0b1c2c;
+    color:#fff;
 }
 
-/* NAV */
+/* NAVBAR */
 nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-padding:20px 50px;
-background:rgba(0,0,0,0.6);
-z-index:1000;
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.7);
+    z-index:1000;
 }
 
 nav a{
-color:#fff;
-margin:0 15px;
-text-decoration:none;
+    color:#fff;
+    margin:0 10px;
+    text-decoration:none;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
 }
 
 /* HERO */
 .hero{
-height:100vh;
-background:url('img1.jpg') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:flex-end;
-padding:100px;
+    height:100vh;
+    background:url('hero.jpg.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    padding:80px;
+    position:relative;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    top:0;
+    left:0;
 }
 
 .hero-box{
-text-align:right;
+    position:relative;
+    z-index:2;
+    text-align:right;
 }
 
 .hero-box img{
-width:180px;
+    width:140px;
 }
 
 .hero-box h1{
-font-size:55px;
-margin:10px 0;
+    font-size:50px;
 }
 
 .btn{
-background:#0d6efd;
-padding:12px 25px;
-border-radius:25px;
-color:#fff;
-text-decoration:none;
+    background:#0d6efd;
+    padding:10px 25px;
+    border-radius:25px;
+    color:#fff;
+    text-decoration:none;
 }
 
-/* SERVICES (زي الصورة بالظبط) */
+/* SERVICES */
 .services{
-background:#0c2d57;
-margin-top:-70px;
-padding:30px;
-display:flex;
-justify-content:space-between;
-width:90%;
-margin-left:auto;
-margin-right:auto;
-border-radius:20px;
+    background:#0e2a44;
+    margin-top:-60px;
+    padding:30px;
+    display:flex;
+    justify-content:space-around;
+    border-radius:15px;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .service{
-flex:1;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-margin:10px;
-padding:20px;
-border-radius:15px;
+    text-align:center;
+    width:22%;
 }
 
 .service i{
-font-size:40px;
-color:#1e90ff;
-margin-bottom:10px;
+    font-size:40px;
+    color:#0d6efd;
+    margin-bottom:10px;
 }
 
 /* WORK */
 .work{
-background:#f2f2f2;
-color:#000;
-padding:30px;
-text-align:center;
+    background:#eee;
+    color:#000;
+    padding:40px;
+    text-align:center;
 }
 
 .gallery{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-justify-content:center;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
 }
 
 .gallery img{
-width:180px;
-height:120px;
-border-radius:10px;
-object-fit:cover;
+    width:180px;
+    height:120px;
+    object-fit:cover;
+    border-radius:8px;
 }
 
 /* FORM */
 .form{
-background:#0b1f3a;
-padding:30px;
-text-align:center;
+    padding:40px;
+    text-align:center;
 }
 
-.form input{
-padding:10px;
-margin:8px;
-width:180px;
-border:none;
-border-radius:5px;
-}
-
-button{
-padding:10px 25px;
-background:#0d6efd;
-color:#fff;
-border:none;
-border-radius:20px;
-cursor:pointer;
+.form input, .form select{
+    padding:10px;
+    margin:10px;
+    width:180px;
 }
 
 /* FOOTER */
 footer{
-background:#08131f;
-padding:20px;
-text-align:center;
+    background:#08131f;
+    padding:20px;
+    text-align:center;
 }
 
 </style>
@@ -150,123 +152,76 @@ text-align:center;
 
 <body>
 
-<!-- NAV -->
 <nav>
-<div>
-<a href="#">الرئيسية</a>
-<a href="#">خدماتنا</a>
-<a href="#">أعمالنا</a>
-<a href="#">طلب عرض سعر</a>
-</div>
-<div>PORTIVA</div>
+    <div>
+        <a href="#">الرئيسية</a>
+        <a href="#">خدماتنا</a>
+        <a href="#">أعمالنا</a>
+    </div>
+    <div class="logo">PORTIVA</div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-box">
-<img src="logo.png.png">
-<h1>PORTIVA LOGISTICS</h1>
-<p>التخليص الجمركي والنقل من جميع الموانئ</p>
-<p>بسرعة - أمان - احترافية</p>
-<a href="https://wa.me/201204646350" class="btn">تواصل معنا الآن</a>
-</div>
+    <div class="hero-box">
+        <img src="logo.png.png">
+        <h1>PORTIVA LOGISTICS</h1>
+        <p>التخليص الجمركي والنقل من جميع الموانئ</p>
+        <a class="btn" href="#">تواصل معنا</a>
+    </div>
 </section>
 
 <!-- SERVICES -->
 <section class="services">
 
-<div class="service">
-<i class="fa-solid fa-ship"></i>
-<h3>التخليص الجمركي</h3>
-<p>تخليص سريع وموثوق من جميع الموانئ</p>
-</div>
+    <div class="service">
+        <i class="fa-solid fa-ship"></i>
+        <h3>التخليص الجمركي</h3>
+    </div>
 
-<div class="service">
-<i class="fa-solid fa-truck"></i>
-<h3>نقل الحاويات</h3>
-<p>نقل آمن وسريع للحاويات</p>
-</div>
+    <div class="service">
+        <i class="fa-solid fa-truck"></i>
+        <h3>نقل الحاويات</h3>
+    </div>
 
-<div class="service">
-<i class="fa-solid fa-anchor"></i>
-<h3>خدمات الميناء</h3>
-<p>خدمات متكاملة داخل الموانئ</p>
-</div>
+    <div class="service">
+        <i class="fa-solid fa-anchor"></i>
+        <h3>خدمات الميناء</h3>
+    </div>
 
-<div class="service">
-<i class="fa-solid fa-box"></i>
-<h3>إدارة الشحنات</h3>
-<p>متابعة احترافية لشحناتك</p>
-</div>
+    <div class="service">
+        <i class="fa-solid fa-box"></i>
+        <h3>إدارة الشحنات</h3>
+    </div>
 
 </section>
 
 <!-- WORK -->
 <section class="work">
-<h2>أعمالنا من أرض الواقع</h2>
+    <h2>أعمالنا من أرض الواقع</h2>
 
-<div class="gallery">
-<img src="img1.jpg">
-<img src="img2.jpg">
-<img src="img3.jpg">
-<img src="img4.jpg">
-<img src="img5.jpg">
-<img src="img6.jpg">
-<img src="img7.jpg">
-<img src="img8.jpg">
-<img src="img9.jpg">
-<img src="img10.jpg">
-<img src="img11.jpg.jpeg">
-<img src="img12.jpg.jpeg">
-<img src="img13.jpg.jpeg">
-<img src="img14.jpg.jpeg">
-<img src="img15.jpg.jpeg">
-</div>
+    <div class="gallery">
+        <img src="img1.jpg">
+        <img src="img2.jpg">
+        <img src="img3.jpg">
+        <img src="img4.jpg">
+        <img src="img5.jpg">
+        <img src="img6.jpg">
+        <img src="img7.jpg">
+        <img src="img8.jpg">
+        <img src="img9.jpg">
+        <img src="img10.jpg">
+        <img src="img11.jpg jpeg">
+        <img src="img12.jpg jpeg">
+        <img src="img13.jpg jpeg">
+        <img src="img14.jpg jpeg">
+        <img src="img15.jpg jpeg">
+    </div>
 </section>
 
-<!-- FORM -->
-<section class="form">
-<h2>طلب عرض سعر</h2>
-
-<input id="name" placeholder="الاسم">
-<input id="phone" placeholder="رقم الهاتف">
-<input id="type" placeholder="نوع الحاوية">
-<input id="count" placeholder="عدد الحاويات">
-<input id="details" placeholder="تفاصيل إضافية">
-
-<br>
-<button onclick="send()">إرسال الطلب</button>
-</section>
-
-<!-- FOOTER -->
 <footer>
-📞 01204646350  
-<br>
-📧 portivalogistics1@gmail.com  
-<br>
-📍 الاسكندرية - باب 10  
+    © 2026 Portiva Logistics
 </footer>
-
-<script>
-
-function send(){
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let type=document.getElementById("type").value;
-let count=document.getElementById("count").value;
-let details=document.getElementById("details").value;
-
-let msg=`طلب عرض سعر:
-الاسم: ${name}
-الهاتف: ${phone}
-نوع الحاوية: ${type}
-العدد: ${count}
-تفاصيل: ${details}`;
-
-window.open("https://wa.me/201204646350?text="+encodeURIComponent(msg));
-}
-
-</script>
 
 </body>
 </html>
