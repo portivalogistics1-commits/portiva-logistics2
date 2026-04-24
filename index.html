@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Portiva Logistics</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Tahoma;
+    background:#0b1c2c;
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background:rgba(0,0,0,0.6);
+    z-index:1000;
+}
+
+nav a{
+    color:#fff;
+    margin:0 10px;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:url('img1.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    padding:100px;
+}
+
+.hero-box{
+    text-align:right;
+}
+
+.hero-box img{
+    width:140px;
+    margin-bottom:10px;
+}
+
+.hero-box h1{
+    font-size:50px;
+    margin:0;
+}
+
+.hero-box p{
+    font-size:18px;
+    margin:10px 0;
+}
+
+.btn{
+    background:#0d6efd;
+    padding:10px 20px;
+    border-radius:25px;
+    color:#fff;
+    text-decoration:none;
+    display:inline-block;
+}
+
+/* SERVICES */
+.services{
+    background:#0e2a44;
+    padding:40px;
+    display:flex;
+    justify-content:space-around;
+}
+
+.service{
+    text-align:center;
+    width:22%;
+}
+
+.service i{
+    font-size:35px;
+    margin-bottom:10px;
+    color:#0d6efd;
+}
+
+/* WORK */
+.work{
+    padding:40px;
+    text-align:center;
+    background:#f5f5f5;
+    color:#000;
+}
+
+.gallery{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.gallery img{
+    width:200px;
+    height:130px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* FORM */
+.form{
+    padding:40px;
+    text-align:center;
+    background:#0b1c2c;
+}
+
+.form input, .form select{
+    padding:10px;
+    margin:10px;
+    width:180px;
+    border-radius:5px;
+    border:none;
+}
+
+.form button{
+    padding:10px 25px;
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#08131f;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div>
+        <a href="#">الرئيسية</a>
+        <a href="#">خدماتنا</a>
+        <a href="#">أعمالنا</a>
+        <a href="#">طلب عرض سعر</a>
+        <a href="#">من نحن</a>
+        <a href="#">اتصل بنا</a>
+    </div>
+    <div class="logo">PORTIVA</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-box">
+        <img src="logo.png">
+        <h1>PORTIVA</h1>
+        <p>التخليص الجمركي والنقل من جميع الموانئ</p>
+        <p>بسرعة - أمان - احترافية</p>
+        <a class="btn" href="#">تواصل معنا الآن</a>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+
+    <div class="service">
+        <i class="fa-solid fa-ship"></i>
+        <h3>التخليص الجمركي</h3>
+        <p>تخليص سريع من جميع الموانئ</p>
+    </div>
+
+    <div class="service">
+        <i class="fa-solid fa-truck"></i>
+        <h3>نقل الحاويات</h3>
+        <p>نقل آمن وسريع</p>
+    </div>
+
+    <div class="service">
+        <i class="fa-solid fa-anchor"></i>
+        <h3>خدمات الميناء</h3>
+        <p>خدمات متكاملة</p>
+    </div>
+
+    <div class="service">
+        <i class="fa-solid fa-box"></i>
+        <h3>إدارة الشحنات</h3>
+        <p>متابعة احترافية</p>
+    </div>
+
+</section>
+
+<!-- WORK -->
+<section class="work">
+    <h2>أعمالنا من أرض الواقع</h2>
+
+    <div class="gallery">
+        <img src="img1.jpg">
+        <img src="img2.jpg">
+        <img src="img3.jpg">
+        <img src="img4.jpg">
+        <img src="img5.jpg">
+        <img src="img6.jpg">
+        <img src="img7.jpg">
+    </div>
+</section>
+
+<!-- FORM -->
+<section class="form">
+    <h2>طلب عرض سعر</h2>
+
+    <form onsubmit="sendWhatsApp(); return false;">
+        <input type="text" id="name" placeholder="الاسم">
+        <input type="text" id="phone" placeholder="رقم الهاتف">
+        <select id="type">
+            <option>نوع الحاوية</option>
+            <option>20 قدم</option>
+            <option>40 قدم</option>
+        </select>
+        <input type="number" id="count" placeholder="عدد الحاويات">
+        <input type="text" id="details" placeholder="تفاصيل إضافية">
+        <br>
+        <button type="submit">إرسال الطلب</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    📞 01204646350 | 📧 portivalogistics1@gmail.com  
+    <br>
+    📍 الاسكندرية - باب 10  
+    <br>
+    © 2026 Portiva Logistics
+</footer>
+
+<script>
+
+function sendWhatsApp(){
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let type = document.getElementById("type").value;
+    let count = document.getElementById("count").value;
+    let details = document.getElementById("details").value;
+
+    let msg = `طلب عرض سعر:
+الاسم: ${name}
+رقم الهاتف: ${phone}
+نوع الحاوية: ${type}
+عدد الحاويات: ${count}
+تفاصيل: ${details}`;
+
+    let url = "https://wa.me/201204646350?text=" + encodeURIComponent(msg);
+    window.open(url, '_blank');
+}
+
+</script>
+
+</body>
+</html>
