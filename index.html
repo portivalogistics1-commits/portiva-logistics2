@@ -2,153 +2,176 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portiva Logistics</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 body{
-    margin:0;
-    font-family:Tahoma;
-    background:#0b1c2c;
-    color:#fff;
+margin:0;
+font-family:Tajawal;
+background:#0b1f3a;
+color:#fff;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 50px;
-    background:rgba(0,0,0,0.6);
-    z-index:1000;
+position:absolute;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+z-index:10;
 }
 
-nav a{
-    color:#fff;
-    margin:0 10px;
-    text-decoration:none;
-    font-size:15px;
+nav .links a{
+color:#fff;
+margin:0 15px;
+text-decoration:none;
+font-size:15px;
 }
 
-.logo{
-    font-size:22px;
-    font-weight:bold;
+.whatsapp-btn{
+border:1px solid #fff;
+padding:8px 20px;
+border-radius:25px;
 }
 
 /* HERO */
 .hero{
-    height:100vh;
-    background:url('img1.jpg') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    padding:100px;
+height:100vh;
+background:url('img1.jpg') center/cover no-repeat;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:flex-end;
+padding:100px;
 }
 
-.hero-box{
-    text-align:right;
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(to bottom,rgba(0,0,0,.3),rgba(0,0,0,.7));
+top:0;
+left:0;
 }
 
-.hero-box img{
-    width:140px;
-    margin-bottom:10px;
+.hero-content{
+position:relative;
+text-align:right;
+max-width:500px;
 }
 
-.hero-box h1{
-    font-size:50px;
-    margin:0;
+.hero-content img{
+width:120px;
+margin-bottom:10px;
 }
 
-.hero-box p{
-    font-size:18px;
-    margin:10px 0;
+.hero-content h1{
+font-size:55px;
+margin:0;
 }
 
-.btn{
-    background:#0d6efd;
-    padding:10px 20px;
-    border-radius:25px;
-    color:#fff;
-    text-decoration:none;
-    display:inline-block;
+.hero-content p{
+margin:10px 0;
 }
 
-/* SERVICES */
+.hero-btn{
+background:#0b5ed7;
+padding:12px 30px;
+border-radius:30px;
+display:inline-block;
+margin-top:10px;
+color:#fff;
+text-decoration:none;
+}
+
+/* SERVICES (نفس شكل الصورة) */
 .services{
-    background:#0e2a44;
-    padding:40px;
-    display:flex;
-    justify-content:space-around;
+position:relative;
+margin-top:-80px;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+background:#0c2d57;
+border-radius:20px;
+padding:25px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
 }
 
 .service{
-    text-align:center;
-    width:22%;
+flex:1;
+text-align:center;
+padding:20px;
+border-right:1px solid rgba(255,255,255,.1);
+}
+
+.service:last-child{
+border:none;
 }
 
 .service i{
-    font-size:35px;
-    margin-bottom:10px;
-    color:#0d6efd;
+font-size:40px;
+color:#2da8ff;
+margin-bottom:10px;
 }
 
 /* WORK */
 .work{
-    padding:40px;
-    text-align:center;
-    background:#f5f5f5;
-    color:#000;
+background:#eee;
+color:#000;
+padding:40px;
+text-align:center;
 }
 
 .gallery{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    justify-content:center;
+display:flex;
+gap:10px;
+overflow-x:auto;
 }
 
 .gallery img{
-    width:200px;
-    height:130px;
-    object-fit:cover;
-    border-radius:8px;
+width:220px;
+height:130px;
+object-fit:cover;
+border-radius:10px;
 }
 
 /* FORM */
 .form{
-    padding:40px;
-    text-align:center;
-    background:#0b1c2c;
+background:#0b1f3a;
+padding:30px;
+text-align:center;
 }
 
-.form input, .form select{
-    padding:10px;
-    margin:10px;
-    width:180px;
-    border-radius:5px;
-    border:none;
+.form input,.form select{
+padding:12px;
+margin:10px;
+border-radius:8px;
+border:none;
+width:200px;
 }
 
 .form button{
-    padding:10px 25px;
-    background:#0d6efd;
-    color:#fff;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+background:#0b5ed7;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+color:#fff;
+cursor:pointer;
 }
 
 /* FOOTER */
 footer{
-    text-align:center;
-    padding:20px;
-    background:#08131f;
-    font-size:14px;
+background:#061321;
+padding:20px;
+text-align:center;
 }
 
 </style>
@@ -156,122 +179,135 @@ footer{
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav>
-    <div>
-        <a href="#">الرئيسية</a>
-        <a href="#">خدماتنا</a>
-        <a href="#">أعمالنا</a>
-        <a href="#">طلب عرض سعر</a>
-        <a href="#">من نحن</a>
-        <a href="#">اتصل بنا</a>
-    </div>
-    <div class="logo">PORTIVA</div>
+<div class="links">
+<a href="#">الرئيسية</a>
+<a href="#">خدماتنا</a>
+<a href="#">أعمالنا</a>
+<a href="#">طلب عرض سعر</a>
+<a href="#">اتصل بنا</a>
+</div>
+
+<div class="whatsapp-btn">
+<a href="https://wa.me/201204646350" style="color:#fff;text-decoration:none">تواصل معنا</a>
+</div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-box">
-        <img src="logo.png">
-        <h1>PORTIVA</h1>
-        <p>التخليص الجمركي والنقل من جميع الموانئ</p>
-        <p>بسرعة - أمان - احترافية</p>
-        <a class="btn" href="#">تواصل معنا الآن</a>
-    </div>
+<div class="overlay"></div>
+
+<div class="hero-content">
+<img src="logo.png.png">
+<h1>PORTIVA</h1>
+<p>التخليص الجمركي والنقل من جميع الموانئ</p>
+<p>بسرعة • أمان • احترافية</p>
+
+<a href="https://wa.me/201204646350" class="hero-btn">تواصل معنا الآن</a>
+</div>
 </section>
 
 <!-- SERVICES -->
 <section class="services">
 
-    <div class="service">
-        <i class="fa-solid fa-ship"></i>
-        <h3>التخليص الجمركي</h3>
-        <p>تخليص سريع من جميع الموانئ</p>
-    </div>
+<div class="service">
+<i class="fa-solid fa-ship"></i>
+<h3>التخليص الجمركي</h3>
+<p>تخليص سريع وموثوق</p>
+</div>
 
-    <div class="service">
-        <i class="fa-solid fa-truck"></i>
-        <h3>نقل الحاويات</h3>
-        <p>نقل آمن وسريع</p>
-    </div>
+<div class="service">
+<i class="fa-solid fa-truck"></i>
+<h3>نقل الحاويات</h3>
+<p>نقل آمن وسريع</p>
+</div>
 
-    <div class="service">
-        <i class="fa-solid fa-anchor"></i>
-        <h3>خدمات الميناء</h3>
-        <p>خدمات متكاملة</p>
-    </div>
+<div class="service">
+<i class="fa-solid fa-anchor"></i>
+<h3>خدمات الميناء</h3>
+<p>خدمات متكاملة</p>
+</div>
 
-    <div class="service">
-        <i class="fa-solid fa-box"></i>
-        <h3>إدارة الشحنات</h3>
-        <p>متابعة احترافية</p>
-    </div>
+<div class="service">
+<i class="fa-solid fa-box"></i>
+<h3>إدارة الشحنات</h3>
+<p>متابعة احترافية</p>
+</div>
 
 </section>
 
 <!-- WORK -->
 <section class="work">
-    <h2>أعمالنا من أرض الواقع</h2>
+<h2>أعمالنا من أرض الواقع</h2>
 
-    <div class="gallery">
-        <img src="img1.jpg">
-        <img src="img2.jpg">
-        <img src="img3.jpg">
-        <img src="img4.jpg">
-        <img src="img5.jpg">
-        <img src="img6.jpg">
-        <img src="img7.jpg">
-    </div>
+<div class="gallery">
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+<img src="img5.jpg">
+<img src="img6.jpg">
+<img src="img7.jpg">
+<img src="img8.jpg">
+<img src="img9.jpg">
+<img src="img10.jpg">
+<img src="img11.jpg.jpeg">
+<img src="img12.jpg.jpeg">
+<img src="img13.jpg.jpeg">
+<img src="img14.jpg.jpeg">
+<img src="img15.jpg.jpeg">
+</div>
+
 </section>
 
 <!-- FORM -->
 <section class="form">
-    <h2>طلب عرض سعر</h2>
+<h2>طلب عرض سعر</h2>
 
-    <form onsubmit="sendWhatsApp(); return false;">
-        <input type="text" id="name" placeholder="الاسم">
-        <input type="text" id="phone" placeholder="رقم الهاتف">
-        <select id="type">
-            <option>نوع الحاوية</option>
-            <option>20 قدم</option>
-            <option>40 قدم</option>
-        </select>
-        <input type="number" id="count" placeholder="عدد الحاويات">
-        <input type="text" id="details" placeholder="تفاصيل إضافية">
-        <br>
-        <button type="submit">إرسال الطلب</button>
-    </form>
+<form onsubmit="sendWhatsApp(); return false;">
+<input type="text" id="name" placeholder="الاسم">
+<input type="text" id="phone" placeholder="رقم الهاتف">
+
+<select id="type">
+<option>نوع الحاوية</option>
+<option>20 قدم</option>
+<option>40 قدم</option>
+</select>
+
+<input type="number" id="count" placeholder="عدد الحاويات">
+<input type="text" id="details" placeholder="تفاصيل إضافية">
+
+<br>
+<button type="submit">إرسال الطلب</button>
+</form>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    📞 01204646350 | 📧 portivalogistics1@gmail.com  
-    <br>
-    📍 الاسكندرية - باب 10  
-    <br>
-    © 2026 Portiva Logistics
+📞 01204646350 | 📧 portivalogistics1@gmail.com  
+<br>
+📍 الاسكندرية - باب 10  
+<br>
+© Portiva Logistics
 </footer>
 
 <script>
-
 function sendWhatsApp(){
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let type = document.getElementById("type").value;
-    let count = document.getElementById("count").value;
-    let details = document.getElementById("details").value;
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let type=document.getElementById("type").value;
+let count=document.getElementById("count").value;
+let details=document.getElementById("details").value;
 
-    let msg = `طلب عرض سعر:
+let msg=`طلب عرض سعر:
 الاسم: ${name}
-رقم الهاتف: ${phone}
+الهاتف: ${phone}
 نوع الحاوية: ${type}
-عدد الحاويات: ${count}
+العدد: ${count}
 تفاصيل: ${details}`;
 
-    let url = "https://wa.me/201204646350?text=" + encodeURIComponent(msg);
-    window.open(url, '_blank');
+window.open("https://wa.me/201204646350?text="+encodeURIComponent(msg));
 }
-
 </script>
 
 </body>
